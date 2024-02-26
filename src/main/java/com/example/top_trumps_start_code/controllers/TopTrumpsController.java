@@ -19,15 +19,15 @@ public class TopTrumpsController {
     TopTrumpsService topTrumpsService;
 
   @PostMapping
-    public ResponseEntity<String> handleCards(@RequestBody ArrayList<Card> cards){
+    public ResponseEntity<String> compareCards(@RequestBody ArrayList<Card> cards){
       String card = topTrumpsService.checkWinner(cards);
       return new ResponseEntity<>(card, HttpStatus.OK);
   }
 
-    //  @PostMapping
-//    public ResponseEntity<String> newGame(){
+//      @PostMapping
+//    public ResponseEntity<> newGame(){
 //        String card = topTrumpsService.checkWinner();
-//        return new ResponseEntity<>(card, HttpStatus.CREATED);
+//        return new ResponseEntity<>(cards, HttpStatus.CREATED);
 //  }
 
 

@@ -10,14 +10,6 @@ import java.util.ArrayList;
 @Service
 public class TopTrumpsService {
 
-    private Card card;
-
-    public TopTrumpsService(Card card){
-        this.card = card;
-    }
-
-    public TopTrumpsService(){}
-
     public String checkWinner(ArrayList<Card> cards){
 
         Card card1 = cards.get(0);
@@ -33,12 +25,4 @@ public class TopTrumpsService {
 
     }
 
-//    GETTERS & SETTERS
-    public Card getCard() {
-        return card;
-    }
-
-    public void setCard(Card card) {
-        this.card = card;
-    }
 }
